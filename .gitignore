@@ -1,5 +1,2 @@
 .vscode
-*.cmake
-CMakeFiles/
-CMakeCache.txt
 RadioTranslator
