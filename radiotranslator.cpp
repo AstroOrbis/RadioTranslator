@@ -43,18 +43,16 @@ int main() {
 	options.insert(std::make_pair("9", "nine"));
 	options.insert(std::make_pair(" ", " "));
 
-	//get multi word input
 	std::string input;
 	std::cout << "Enter input: ";
 	std::getline(std::cin, input);
 	std::cout << "\n\n";
 
-	//convert to lowercase
+
 	for (int i = 0; i < input.length(); i++) {
 		input[i] = tolower(input[i]);
 	}
 
-	//split input into words
 	std::vector<std::string> words;
 	std::string word;
 	for (int i = 0; i < input.length(); i++) {
@@ -67,10 +65,8 @@ int main() {
 		}
 	}
 
-	//add last word
 	words.push_back(word);
 
-	//translate words
 	std::vector<std::string> translatedWords;
 	for (int i = 0; i < words.size(); i++) {
 		std::string translatedWord;
@@ -80,12 +76,10 @@ int main() {
 		translatedWords.push_back(translatedWord);
 	}
 
-	//capitalize first letter of each word
 	for (int i = 0; i < translatedWords.size(); i++) {
 		translatedWords[i][0] = toupper(translatedWords[i][0]);
 	}
 
-	//print translated words
 	for (int i = 0; i < translatedWords.size(); i++) {
 		std::cout << translatedWords[i] << "\n" << std::endl;
 	}
